@@ -1,4 +1,7 @@
+
 # AnimeFlix CLI
+
+![AnimeFlix CLI](https://github.com/sahilsuman933/AnimeFlix-CLI/assets/34382211/1d658bb2-c3e6-43de-924d-0f712620bdce)
 
 AnimeFlix CLI is a command-line interface (CLI) program that allows you to search for anime and stream it using webtorrent. The program fetches anime information from Nyaa and lets you select the anime to watch it.
 
