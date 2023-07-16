@@ -10,7 +10,7 @@ Before using AnimeFlix CLI, make sure you have the following installed on your s
 - [pup](https://github.com/ericchiang/pup)
 - [fzf](https://github.com/junegunn/fzf)
 - [webtorrent-cli](https://github.com/webtorrent/webtorrent-cli)
-- [mpv](https://mpv.io/) (optional, required for streaming video files)
+- [mpv](https://mpv.io/)
 
 ## Installation
 
