@@ -26,7 +26,9 @@ function stream_or_download() {
     if echo "$animeName" | grep -q -E '\.(mkv|mp4|avi|mov)$'; then
         (webtorrent "$MagnetURL" --mpv)
     else
-        index=$(webtorrent "$MagnetURL" --select | grep -vE "fetching torrent metadata from [0-9]+ peers|verifying existing torrent data...|To select a specific file, re-run 'webtorrent' with \"--select \[index\]\"|Example: webtorrent download \"magnet:...\" --select 0|webtorrent is exiting...|Select a file to download:|To select a specific file, re-run \`webtorrent\` with \"--select \[index\]\""   | fzf | awk '{print $1}')
+        mkdir ./.tmp
+        index=$(webtorrent "$MagnetURL" --select --out ./.tmp | grep -vE "fetching torrent metadata from [0-9]+ peers|verifying existing torrent data...|To select a specific file, re-run 'webtorrent' with \"--select \[index\]\"|Example: webtorrent download \"magnet:...\" --select 0|webtorrent is exiting...|Select a file to download:|To select a specific file, re-run \`webtorrent\` with \"--select \[index\]\""   | fzf | awk '{print $1}')
+        rm -r ./.tmp
         (webtorrent "$MagnetURL" --select $index --mpv)
     fi
 }
