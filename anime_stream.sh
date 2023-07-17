@@ -22,7 +22,7 @@ function select_anime() {
     rm ./anime_name.txt ./anime_magnet.txt
 }
 
-function stream_or_download() {
+function stream() {
     if echo "$animeName" | grep -q -E '\.(mkv|mp4|avi|mov)$'; then
         (webtorrent "$MagnetURL" --mpv)
     else
@@ -40,4 +40,4 @@ fi
 
 query_nyaa "$@"
 select_anime
-stream_or_download
+stream
