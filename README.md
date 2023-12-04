@@ -20,7 +20,7 @@ Before using AnimeFlix CLI, make sure you have the following installed on your s
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your_username/AnimeFlix-CLI.git
+git clone https://github.com/sahilsuman933/AnimeFlix-CLI
 cd AnimeFlix-CLI
 ```
 
